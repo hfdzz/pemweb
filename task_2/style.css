@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.judul {
+    font-family: sans-serif;
+    color: rgb(255, 64, 0);
+}
+
+#div-search * {
+    margin: 5px 0;
+}
+
+#search-submit {
+    padding: 5px 10px;
+    background-color: rgb(255, 64, 0);
+    border: none;
+    color: white;
+    text-align: center;
+}
+
+#table-detail {
+    width: 700px;
+    background-color: aliceblue;
+    border: 1px black solid;
+}
+
+#table-detail thead, #table-detail th,#table-detail tr, #table-detail td {
+    border: 1px black solid;
+}
+
+#btn-back button{
+    margin: 3px;
+    padding: 5px 10px;
+    background-color: rgb(255, 64, 0);
+    border: none;
+    color: white;
+}
