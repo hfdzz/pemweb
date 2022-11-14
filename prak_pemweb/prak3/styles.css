@@ -1,0 +1,260 @@
+/* var */
+:root {
+    --header-primary: rgb(22, 139, 162);
+    --header-secondary: rgb(33, 115, 159);
+    --color-primary: rgb(174, 226, 237);
+    --color-secondary: rgb(127, 255, 212);
+    --color-tertiary: rgb(128, 189, 201);
+    --color-form: rgb(221, 233, 239);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-primary);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.sticky-container {
+    position: sticky;
+}
+
+.section-page {
+    padding: 10px 100px;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: rgb(127, 255, 212);
+}
+
+.section-square {
+    background-color: var(--color-tertiary);
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-tertiary);
+    border-radius: 15px;
+}
+
+header {
+    background-color: var(--header-primary);
+}
+
+.header-content {
+    padding: 10px 40px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-img, .header-img img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-tertiary);
+}
+
+.header-desc {
+    padding: 0 20px;
+    color: white;
+}
+
+nav {
+    background-color: var(--header-secondary);
+}
+
+#nav-btn {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li:hover {
+    background-color: rgb(51, 129, 171);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li + li {
+    border-left: 1px dashed white;
+}
+
+footer {
+    height: 30px;
+    background-color: var(--header-primary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tentang-saya--main-content {
+    display: flex;
+}
+
+#tentang-saya--main-content div {
+    width: 45%;
+    margin: 0 10px;
+}
+
+#about-video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+#pengalaman--main-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, thead, th, tr, tbody, td {
+    border: 1px black solid;
+    padding: 5px;
+}
+
+thead{
+    background-color: var(--header-primary);
+}
+
+.cell-wide{
+    min-width: 200px;
+}
+
+.cell-small {
+    max-width: 30px;
+}
+
+#hubungi-saya--main-content form{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-form);
+}
+
+#hubungi-saya--main-content form > *{
+    margin: 5px 0;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#hubungi-saya--main-content form label{
+    margin: 0 5px;
+}
+
+#hubungi-saya--main-content form label input{
+    margin: 0 3px;
+}
+
+@media (max-width: 800px) {
+    .cell-wide{
+        min-width: 0;
+    }
+    
+    .cell-small {
+        max-width: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-page {
+        padding: 10px 10px;
+    }
+
+    
+    .header-content {
+        padding: 10px 40px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #nav-btn { 
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        left: 10px;
+        bottom: 10px;
+        rotate: 0deg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-primary);
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #tentang-saya--main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    #tentang-saya--main-content div {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    #pengalaman--main-content {
+        overflow-x: scroll;
+    }
+}

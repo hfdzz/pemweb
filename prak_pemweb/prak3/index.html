@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUSUF HAFIDZ - CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container">
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="assets/foto.png" alt="Profile Image">
+            </div>
+            <div class="header-desc">
+                <h1>
+                    Yusuf Hafidz
+                </h1>
+                <h4>
+                    Mahasiswa Prodi Teknik Informatika Itera
+                </h4>
+            </div>
+        </div>
+        <button id="nav-btn" onclick="mobileNav()">V</button>
+        <nav class="container">
+            
+            <ul>
+                <li><a href="#tentang-saya">TENTANG SAYA</a></li>
+                <li><a href="#pengalaman">PENGALAMAN KERJA</a></li>
+                <li><a href="#hubungi-saya">HUBUNGI SAYA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div id="tentang-saya" class="section-page">
+            <h2 class="title">
+                Tentang Saya
+            </h2>
+            <div id="tentang-saya--main-content">
+                <div class="section-square">
+                    <p>
+                        Saya merupakan mahasiswa aktif semester 5 yang sedang menempuh pendidikan pada program studi Teknik Informatika Institut Teknologi Sumatera.
+                    </p>
+                </div>
+                <div>
+                    <video controls id="about-video">
+                        <source src="assets/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="pengalaman" class="section-page">
+            <h2 class="title">
+                Pengalaman Organisasi/Kepanitiaan
+            </h2>
+            <div id="pengalaman--main-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" class="cell-small">No.</th>
+                            <th rowspan="2">Organisasi/Kepanitiaan</th>
+                            <th rowspan="2">Jabatan</th>
+                            <th colspan="2">Periode</th>
+                            <th rowspan="2" class="cell-wide">Deskripsi</th>
+                        </tr>
+                        <tr>
+                            <th>Awal</th>
+                            <th>Akhir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td>PPLK 2021</td>
+                            <td>Staff Divisi IMTEK</td>
+                            <td class="text-center">2021</td>
+                            <td class="text-center">2021</td>
+                            <td>Front-End Website</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td>ICOSITER 2021</td>
+                            <td>Staff Divisi Website</td>
+                            <td class="text-center">2021</td>
+                            <td class="text-center">2021</td>
+                            <td>Front-End Website</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td>Himpunan Mahasiswa Informatika ITERA</td>
+                            <td>Staff Divisi PPK</td>
+                            <td class="text-center">2022</td>
+                            <td class="text-center">2022</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="hubungi-saya" class="section-page">
+            <h2 class="title">
+                Hubungi Saya
+            </h2>
+            <div id="hubungi-saya--main-content" class="section-card">
+                <form>
+                    <div>
+                        <label>Nama<input type="text"></label>
+                    </div>
+                    <div>
+                        <p>Sudah nonton video saya?</p>
+                        <label><input type="radio" value="sudah" name="video">Sudah</label>
+                        <label><input type="radio" value="belum" name="video">Belum</label>
+                    </div>
+                    <div>
+                        <p>Warna Kesukaan?</p>
+                        <label><input type="checkbox" value="Merah" name="warna">Merah</label>
+                        <label><input type="checkbox" value="Hijau" name="warna">Hijau</label>
+                        <label><input type="checkbox" value="Biru" name="warna">Biru</label>
+                    </div>
+                    <input type="submit" value="Submit" class="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="container">
+        <div>
+           <p>Created by <b>Yusuf Hafidz</b></p>
+        </div>
+    </footer>
+</body>
+<script>
+
+function mobileNav(){
+    const nav = document.querySelector('nav');
+    const navBtn = document.querySelector('#nav-btn');
+    if(nav.style.height == '0px' || nav.style.height == ''){
+        nav.style.setProperty('height','100%');
+        navBtn.style.setProperty('rotate', '180deg');
+    }else{
+        nav.style.setProperty('height', '0px');
+        navBtn.style.setProperty('rotate', '0deg');
+    }
+}
+
+</script>
+</html>
